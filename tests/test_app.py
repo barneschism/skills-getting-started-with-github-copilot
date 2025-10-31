@@ -316,7 +316,7 @@ class TestIntegrationScenarios:
         email = "independent@mergington.edu"
         
         # Sign up for Chess Club
-        client.post("/activities/Chess Club/signup?email={email}")
+        client.post(f"/activities/Chess Club/signup?email={email}")
         
         # Verify other activities are unaffected
         activities_response = client.get("/activities")
